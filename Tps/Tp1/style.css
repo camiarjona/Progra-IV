@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Nata Sans', sans-serif;
+    margin: 0;
+    background-color: #111;
+    color: #eee;
+}
+
+header {
+    background-color: #111;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #111;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-menu ul,
+.breadcrumb ol {
+    display: flex;
+    gap: 20px;
+}
+
+#hero {
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown ul {
+    position: absolute;
+    top: 100%;
+    /* aparece debajo del summary */
+    left: 0;
+    background-color: #222;
+    padding: 10px;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.dropdown[open] ul {
+    display: block;
+}
+
+
+.dropdown summary {
+    cursor: pointer;
+}
+
+.dropdown ul {
+    display: inline-block;
+}
+
+details summary::marker {
+    content: "";
+    display: none;
+}
+
+details summary::after {
+    content: " ▸";
+    font-size: 0.8em;
+}
+
+details[open] summary::after {
+    content: " ▾";
+    font-size: 0.8em;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+a:hover,
+details:hover {
+    color: #aaa;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
