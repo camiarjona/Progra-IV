@@ -11,14 +11,97 @@ html {
 }
 
 body {
-    font-family: 'Raleway', 'Nata Sans', sans-serif;
-    margin: 0;
+    font-family: 'Raleway', sans-serif;
     background-color: #111;
     color: #eee;
+    margin: 0;
 }
 
 header {
     background-color: #111;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%;
+}
+
+.about-us h2 {
+    font-weight: 200;
+    letter-spacing: 10px;
+    font-size: 4em;
+    margin: 0;
+}
+
+.hero-column-right {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moon-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Órbitas */
+.circle-border1,
+.circle-border2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    transform: translate(-50%, -50%);
+}
+
+.circle-border1 {
+    width: 300px;
+    height: 300px;
+}
+
+.circle-border2 {
+    width: 350px;
+    height: 350px;
+}
+
+/* Luna */
+.moon-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: translate(-48%, -50%);
+}
+
+/* Datos posicionados alrededor */
+.moon-data {
+    position: absolute;
+    color: #eee;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.data1 {
+    top: 5%;
+    left: 60%;
+}
+
+/* arriba */
+.data2 {
+    bottom: 20%;
+    left: 10%;
+}
+
+/* abajo izquierda */
+.data3 {
+    top: 40%;
+    right: 0;
 }
 
 ul,
@@ -46,10 +129,6 @@ ol {
 .breadcrumb ol {
     display: flex;
     gap: 20px;
-}
-
-#hero {
-    display: flex;
 }
 
 .dropdown {
