@@ -1,0 +1,58 @@
+.bloque {
+    display: block;
+    background-color: aqua;
+    margin: 10px;
+}
+
+.en-linea {
+    display: inline-block;
+    background-color: coral;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.caja {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 200px;
+}
+
+.oculto {
+    display: none;
+}
+
+.visible {
+    display: block;
+    background-color: lightgreen;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.lista {
+    display: list-item;
+    list-style-type: "💡";
+    /* cambia a circle, square, etc. */
+    margin-left: 20px;
+}
+
+.mi-tabla {
+    display: table;
+    border-collapse: collapse;
+}
+
+.fila {
+    display: table-row;
+}
+
+.celda {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 5px;
+}
