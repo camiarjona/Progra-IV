@@ -92,13 +92,11 @@ header {
     left: 60%;
 }
 
-/* arriba */
 .data2 {
     bottom: 20%;
     left: 10%;
 }
 
-/* abajo izquierda */
 .data3 {
     top: 40%;
     right: 0;
@@ -191,3 +189,44 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+/*  - WHO WE ARE */
+
+.who-we-are {
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%;
+    width: 90%;
+    height: 27rem;
+    gap: 2rem;
+    border-radius: 0.1875rem;
+}
+
+.image-container {
+    position: relative;
+    width: 40%;
+}
+
+.image-container img {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -61%);
+    border-radius: 0.1875rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    width: 60%;
+}
+
+.text-container h2 {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
