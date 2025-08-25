@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    color: var(--font-white);
+    flex-direction: row;
+    gap: 1rem;
+    margin: 10px;
+}
+
+.item1 {
+    flex: 3;
+    background-color: var(--color-1);
+}
+
+.item2 {
+    flex: 2;
+    background-color: var(--color-2);
+}
+
+.item3 {
+    flex: 1;
+    background-color: var(--color-3);
+}
