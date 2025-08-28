@@ -56,3 +56,11 @@
     border: 1px solid black;
     padding: 5px;
 }
+
+.container {
+    display: none;
+}   
+
+#mycheckbox:checked ~ .container {
+    display: block;
+}
