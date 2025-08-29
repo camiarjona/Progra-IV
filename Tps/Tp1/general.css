@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #111;
+    color: #eee;
+    margin: 0;
+    max-width: 100%;
+}
+
+/*  - LISTAS  */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

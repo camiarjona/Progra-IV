@@ -1,22 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #111;
-    color: #eee;
-    margin: 0;
-}
-
+/*  - HEADER  */
 header {
     background-color: #111;
     display: flex;
@@ -47,7 +29,7 @@ header {
     height: 100%;
 }
 
-/* Órbitas */
+/* > Órbitas */
 .circle-border1,
 .circle-border2 {
     position: absolute;
@@ -68,7 +50,7 @@ header {
     height: 350px;
 }
 
-/* Luna */
+/* > Luna */
 .moon-container img {
     position: absolute;
     top: 50%;
@@ -79,7 +61,7 @@ header {
     transform: translate(-48%, -50%);
 }
 
-/* Datos posicionados alrededor */
+/* > Datos posicionados alrededor */
 .moon-data {
     position: absolute;
     color: #eee;
@@ -102,13 +84,7 @@ header {
     right: 0;
 }
 
-ul,
-ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
+/*  - NAVBAR  */
 .nav-container {
     position: sticky;
     top: 0;
@@ -129,6 +105,37 @@ ol {
     gap: 20px;
 }
 
+/* > Search bar */
+.nav-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.nav-search-bar input {
+    border: none;
+    background: none;
+    color: #eee;
+    outline: none;
+    width: 150px;
+}
+
+.nav-search-bar button {
+    background: none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0 5px;
+}
+
+.nav-search-bar button:hover {
+    color: #aaa;
+}
+
+/* > Dropdown */
 .dropdown {
     position: relative;
 }
@@ -138,17 +145,14 @@ ol {
     top: 100%;
     /* aparece debajo del summary */
     left: 0;
-    background-color: #222;
+    background-color: #111;
     padding: 10px;
     margin: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-left: #aaa 1px solid;
     display: none;
 }
-
-.dropdown[open] ul {
-    display: block;
-}
-
 
 .dropdown summary {
     cursor: pointer;
@@ -156,7 +160,7 @@ ol {
 
 .dropdown ul {
     display: inline-block;
-}
+}   
 
 details summary::marker {
     content: "";
@@ -183,23 +187,30 @@ details:hover {
     color: #aaa;
 }
 
-footer {
+/*  - FOOTER  */
+.footer-content {
     background-color: #111;
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-/*  - WHO WE ARE */
+.footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
 
+/*  - WHO WE ARE */
 .who-we-are {
     background-color: #222;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 5%;
-    width: 90%;
-    height: 27rem;
+    max-width: 90%;
+    height: 23rem;
     gap: 2rem;
     border-radius: 0.1875rem;
 }
@@ -221,12 +232,41 @@ footer {
 }
 
 .text-container {
-    width: 60%;
+    max-width: 60%;
+    margin-top: 1em;
 }
 
 .text-container h2 {
     font-weight: 300;
-    font-size: 1.2em;
-    margin-top: 0;
+    font-size: 1em;
+    margin: 0;
 }
 
+.text-container h3 {
+    font-weight: 400;
+    font-size: 2em;
+    margin: 0;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: left;
+}
+
+.text-container button {
+    background: none;
+    color: #eee;
+    padding: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 8em;
+    margin-top: 1rem;
+}
+
+.text-container button:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #222;
+    transition: all 0.2s ease-in-out;
+}
