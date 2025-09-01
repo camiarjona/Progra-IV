@@ -1,0 +1,153 @@
+/*  - WHO WE ARE */
+.who-we-are {
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%;
+    max-width: 90%;
+    height: 23rem;
+    gap: 2rem;
+    border-radius: 0.1875rem;
+}
+
+.image-container {
+    position: relative;
+    width: 40%;
+}
+
+.image-container img {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -61%);
+    border-radius: 0.1875rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    max-width: 60%;
+    margin-top: 1em;
+}
+
+.text-container h2 {
+    font-weight: 300;
+    font-size: 1em;
+    margin: 0;
+}
+
+.text-container h3 {
+    font-weight: 400;
+    font-size: 2em;
+    margin: 0;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: left;
+}
+
+.text-container button {
+    background: none;
+    color: #eee;
+    padding: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 8em;
+    margin-top: 1rem;
+}
+
+.text-container button:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #222;
+    transition: all 0.2s ease-in-out;
+}
+
+/*  - ASTRONOMY COMMUNITIES  */
+.astronomy-communities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    max-width: 90%;
+    height: 23rem;
+    gap: 4rem;
+}
+
+.astronomy-content-left {
+    max-width: 40%;
+    width: 100%;
+    text-align: left;
+}
+
+.astronomy-content-left h2 {
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.astronomy-content-right {
+    max-width: 60%;
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 4rem;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* - EXPLORE WITH US */
+.explore {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.pixabay.com/photo/2021/09/26/14/37/milky-way-6657951_1280.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    max-width: 90%;
+    height: 17rem;
+    border-radius: 0.1875rem;
+    text-align: center;
+}
+
+.explore h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    color: #eee;
+}
+
+.explore p {
+    padding: 1rem 1rem;
+    margin: 0;
+    margin: 0 10rem;
+}
+
+.explore button {
+    background: #eee;
+    color: #111;
+    padding: 1rem 2rem;
+    border: 1px solid #aaa;
+    border-radius: 8em;
+}
+
+.explore button:hover {
+    cursor: pointer;
+    background: none;
+    color: #eee;
+    transition: all 0.3s ease-in-out;
+}

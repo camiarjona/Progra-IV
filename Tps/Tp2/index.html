@@ -4,72 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo práctico 2</title>
+    <title>Dorian</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-
-    <!-- - Ejercicio 1-->
-    <h2>Ejercicio 1: block vs inline</h2>
-
-    <div class="bloque">Bloque 1</div>
-    <div class="bloque">Bloque 2</div>
-
-    <span class="en-linea">Inline 1</span>
-    <span class="en-linea">Inline 2</span>
-
-    <hr>
-
-    <!-- - Ejercicio 2-->
-    <h2>Ejercicio 2: inline-block</h2>
-
-    <div class="caja">Caja 1</div>
-    <div class="caja">Caja 2</div>
-    <div class="caja">Caja 3</div>
-
-    <hr>
-
-    <!-- - Ejercicio 3-->
-    <h2>Ejercicio 3: display none</h2>
-
-    <p id="texto" class="oculto">Texto oculto</p>
-    <button id="boton">Mostrar/ocultar texto</button>
-
-    <input type="checkbox" id="mycheckbox">
-    <label for="mycheckbox">Mostrar container</label>
-
-    <div class="container">
-        <p>Soy el container oculto</p>
-    </div>
-    
-    <hr>
-
-    <!-- - Ejercicio 4-->
-    <h2>Ejercicio 4: list-item</h2>
-
-    <div class="lista">Elemento 1</div>
-    <div class="lista">Elemento 2</div>
-    <div class="lista">Elemento 3</div>
-
-    <hr>
-
-    <!-- - Ejercicio 5-->
-    <h2>Ejercicio 5: display table</h2>
-
-    <div class="mi-tabla">
-        <div class="fila">
-            <div class="celda">Celda 1</div>
-            <div class="celda">Celda 2</div>
+    <!-- * Barra de navegación -->
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="images/logo.png" alt="Logo de Dorian">
         </div>
-        <div class="fila">
-            <div class="celda">Celda 3</div>
-            <div class="celda">Celda 4</div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#" class="nav-link">HOME</a></li>
+                <li><a href="#" class="nav-link">PAGES</a></li>
+                <li><a href="#" class="nav-link">ELEMENTS</a></li>
+                <li><a href="#" class="nav-link">BLOG</a></li>
+                <li><a href="#" class="nav-link">PORTFOLIO</a></li>
+                <li><a href="#" class="nav-link">SHOP</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <i class='bx  bx-search'></i>
+            <i class='bx  bx-shopping-bag'></i>
+            <i class='bx  bx-menu'></i>
         </div>
     </div>
 
+    <!-- * Main - Con grid -->
+    <main>
+        <div class="grid-container">
+            <div class="one-page-websites">
+                1
+            </div>
+            <div class="vertical-image">
+                2
+            </div>
+            <div class="about-us">
+                3
+            </div>
+            <div class="square-image">
+                4
+            </div>
+            <div class="vertical-image-2">
+                5
+            </div>
+            <div class="latest-portfolio">
+                6
+            </div>
+            <div class="horizontal-image">
+                7
+            </div>
+            <div class="horizontal-image-2">
+                8
+            </div>
+            <div class="square-image-2">
+                9
+            </div>
+        </div>
+    </main>
+
+    <!-- * Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-content-left">
+                <p class="footer-title">This is dorian theme</p>
+                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod perspiciatis alias
+                    delectus quia
+                    minus, fuga quibusdam nulla quae exercitationem sit voluptatibus nisi, odit voluptas fugiat nam.
+                    Iste recusandae nihil temporibus.</p>
+
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-content-middle-left">
+                <p class="footer-title">Latest post</p>
+                <ul>
+                    <li>
+                        <a href="">Step Into the Work</a>
+                        <p class="date">April 1, 2025</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="">See more Do more</a>
+                        <p class="date">March 30, 2025</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="">Work & Design</a>
+                        <p class="date">July 15, 2025</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-content-middle-right">
+                <p class="footer-title">Some widget here</p>
+                <ul>
+                    <li><a href="#">Find Out More About Us</a></li>
+                    <li><a href="#">Read Our Awesome Publications</a></li>
+                    <li><a href="#">Apply Now and Join The Team</a></li>
+                    <li><a href="#">Check Out Our Awarded Projects</a></li>
+                    <li><a href="#">Drop Us a Note & Introduce Yourself</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-content-right">
+                <p class="footer-title">Follow us</p>
+                <div class="images-footer-follow-us">
+                    <img src="https://cdn.pixabay.com/photo/2023/01/05/09/31/ferris-wheel-7698474_1280.jpg" alt="">
+                    <img src="https://cdn.pixabay.com/photo/2025/08/21/09/51/rouen-cathedral-9787080_1280.jpg" alt="">
+                    <img src="https://cdn.pixabay.com/photo/2025/03/31/21/30/italy-9505450_1280.jpg" alt="">
+                    <img src="https://cdn.pixabay.com/photo/2025/08/17/22/55/samarkand-9780493_1280.jpg" alt="">
+                    <img src="https://cdn.pixabay.com/photo/2025/04/24/22/36/beach-9556784_1280.jpg" alt="">
+                    <img src="https://cdn.pixabay.com/photo/2025/08/08/11/48/kanha-tiger-reserve-9762568_1280.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Dorian by <a href="#" target="_blank">Cami Arjona</a></p>
+        </div>
+    </footer>
 </body>
-
-<script src="script.js"></script>
 
 </html>

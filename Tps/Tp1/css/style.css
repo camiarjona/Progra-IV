@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url("header.css");
+@import url("navbar.css");
+@import url("footer.css");
+@import url("main-sections.css");
+
 html {
     box-sizing: border-box;
 }

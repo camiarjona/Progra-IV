@@ -5,9 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astron</title>
-    <link rel="icon" type="image/png" href="astron.png" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="general.css">
+    <link rel="icon" type="image/png" href="images/astron.png" />
+    <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
@@ -17,14 +16,15 @@
         <div class="nav-bar">
             <!-- * Logo de Astron -->
             <div class="nav-logo">
-                <img src="astron_nav.jpg" alt="Logo de Astron" width="60" height="30" />
+                <a href="index.html"><img src="images/astron_nav.jpg" alt="Logo de Astron" width="60" height="30" /></a>
+
             </div>
 
             <div class="nav-menu">
                 <!-- * Barra de navegación -->
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#hero">About</a></li>
                         <li class="dropdown">
                             <details>
@@ -45,10 +45,11 @@
 
             <!-- * Barra de búsqueda -->
             <div class="nav-search-bar">
-                <input type="text" placeholder="Search..." />
-                <button type="button"><i class='bx  bx-search'></i></button>
+                <form action="">
+                    <input type="search" placeholder="Search..." />
+                    <i class='bx  bx-search'></i>
+                </form>
             </div>
-
         </div>
     </div>
 
@@ -73,16 +74,19 @@
             <div class="moon-container">
                 <div class="circle-border1"></div>
                 <div class="circle-border2"></div>
-                <img src="luna.png" alt="Luna" />
+                <img src="images/luna.png" alt="Luna" />
 
                 <!-- * Datos en diferentes posiciones -->
                 <div class="moon-data data1">
+                    <p class="dot1">•</p>
                     <p>27 Days</p>
                 </div>
                 <div class="moon-data data2">
+                    <p class="dot2">•</p>
                     <p>16,7 km/h</p>
                 </div>
                 <div class="moon-data data3">
+                    <p class="dot3">•</p>
                     <p>3474,8 km</p>
                 </div>
             </div>
@@ -92,9 +96,9 @@
 
     <main>
         <!-- * Sección Who we are -->
-        <section class="who-we-are">
+        <section class="who-we-are" id="who-we-are">
             <div class="image-container">
-                <img src="community.jpg" alt="Observación astronómica" width="264" height="303" />
+                <img src="images/community.jpg" alt="Observación astronómica" width="264" height="303" />
             </div>
 
             <div class="text-container">
@@ -119,36 +123,46 @@
             </div>
         </section>
 
-        <br />
-        <hr />
-
         <!-- * Sección astronomy communities -->
-        <section class="astronomy-communities">
-            <h2>Astronomy Communities For Everyone</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus, pariatur ad earum consequatur porro ea quis impedit
-                ipsa enim fugiat quibusdam itaque voluptas, magni molestias animi
-                saepe excepturi repellendus? Doloremque!
-            </p>
-
-            <ul class="statistics">
-                <li>2,950+ Active Member</li>
-                <li>12 Years of Experience</li>
-                <li>5 Branch Location</li>
-                <li>24 Observatory Zone</li>
-            </ul>
+        <section class="astronomy-communities" id="astronomy-communities">
+            <div class="astronomy-content-left">
+                <p>About Us</p>
+                <h2>Astronomy Communities For Everyone</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Necessitatibus, pariatur ad earum consequatur porro ea quis impedit
+                    ipsa enim fugiat quibusdam itaque voluptas.
+                </p>
+            </div>
+            <div class="astronomy-content-right">
+                <div class="statistics">
+                    <div class="elemento1">
+                        <p class="number">2,950+</p>
+                        <p>Active Member</p>
+                    </div>
+                    <div class="elemento2">
+                        <p class="number">12</p>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="elemento3">
+                        <p class="number">5</p>
+                        <p>Branch Location</p>
+                    </div>
+                    <div class="elemento4">
+                        <p class="number">24</p>
+                        <p>Observatory Zone</p>
+                    </div>
+                    </d>
+                </div>
         </section>
 
-        <hr />
-
         <!-- * Sección explore with us -->
-        <section class="explore">
+        <section class="explore" id="explore">
             <h2>Let's Explore With Us</h2>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores rem
                 nobis unde illum molestiae, quaerat ipsa ad magnam commodi optio rerum
-                minus recusandae tempore, esse ea assumenda qui dolorum voluptatibus?
+                minus recusandae tempore.
             </p>
             <button type="button">Join Us Now</button>
         </section>
@@ -161,7 +175,7 @@
         <div class="footer-content">
             <div class="footer-content-left">
 
-                <img src="astron_nav.jpg" alt="Logo de Astron" width="150" height="75" />
+                <img src="images/astron_nav.jpg" alt="Logo de Astron" width="150" height="75" />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
@@ -173,8 +187,8 @@
                     <a href="https://x.com" target="_blank">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="https://instagram.com" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
                     </a>
                 </div>
             </div>
@@ -183,7 +197,7 @@
                 <nav>
                     <ul>
                         <p>Our Store</p>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#hero">About Us</a></li>
                         <li><a href="#who-we-are">Who We Are</a></li>
                         <li><a href="#astronomy-communities">Astronomy Communities</a></li>
@@ -195,14 +209,16 @@
             <div class="footer-contact">
                 <section id="get-in-touch">
                     <p>Get in Touch</p>
-                    <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
-                    <p>Calle Principal 123, Ciudad, Provincia</p>
-                    <p><a href="tel:+123456789">+123456789</a></p>
+                    <p><i class="fa-solid fa-location-dot"></i> 2443 Oak Ridge Omaha, QA 45065</p>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:+123456789"> 207-8767-452</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i><a href="https://www.whatsapp.com/?lang=es_LA"
+                            target="_blank"> 082-245-7253</a></p>
+                    <p><i class="fa-solid fa-envelope"></i><a href="mailto:example@gmail.com"> support@site.com</a></p>
                 </section>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Astron. All rights reserved.</p>
+            <p>Copyright &copy; 2023 Astron | Powered by Astron</p>
         </div>
     </footer>
 </body>
