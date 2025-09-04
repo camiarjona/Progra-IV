@@ -1,0 +1,39 @@
+/* - NAVBAR */
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.icons i {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #555;
+}
+
+.nav-bar ul li::after {
+    content: '▾';
+    flex: 1;
+    color: #222;
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
