@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <script type="module" src="app.js" defer></script>
+</head>
+
+<body id="inventario">
+    <h2>Inventario de medicamentos</h2>
+    <button id="btnCargar">Cargar medicamento</button>
+    <button id="btnListado">Ver listado</button>
+
+    <!-- Sección formulario -->
+    <div id="seccionCargar" style="display:none;">
+        <form id="formInventario">
+            <input type="number" id="id" placeholder="ID" required> 
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="number" id="precio" placeholder="Precio" required>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <button type="submit">Agregar Medicamento</button>
+        </form>
+    </div>
+
+    <!-- Sección listado -->
+    <div id="seccionListado" style="display:none;">
+        <h2>Medicamentos en inventario</h2>
+        <ul id="listaInventario"></ul>
+    </div>
+</body>
+
+</html>
