@@ -9,11 +9,13 @@ export class Venta {
         this.total = medicamento.precio * cantidad;
     }
 
-    static registrarVenta(medicamento, cantidad){
+    static registrarVenta(id, cantidad){
         // actualizamos el stock
-        const actualizado = Inventario.actualizarStock(medicamento.id, cantidad);
+        const actualizado = Inventario.actualizarStock(id, cantidad);
 
         if(!actualizado) return;
+
+        const medicamento = Inventario.buscarMedicamento(id);
 
         // registramos la venta
         const nuevaVenta = new Venta(medicamento, cantidad)

@@ -34,6 +34,7 @@ export const Inventario = {
             console.log("La cantidad no puede ser mayor al stock disponible");
             return false;
         }
+
         medicamento.stock -= cantidad;
         console.log(`Stock actualizado. Nuevo stock de ${medicamento.nombre}: ${medicamento.stock}`);
         return true;

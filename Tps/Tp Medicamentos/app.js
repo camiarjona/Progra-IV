@@ -12,6 +12,11 @@ btnVentas?.addEventListener("click", () => {
     window.location.href = "venta.html";
 });
 
+const ibu = Inventario.agregarMedicamento(1, "Ibuprofeno", 1500, 20);
+const parac = Inventario.agregarMedicamento(2, "Paracetamol", 1700, 25);
+
+Venta.registrarVenta(1, 10);
+Venta.registrarVenta(1, 7);
 
 if (document.body.id === "inventario") {
     const btnCargar = document.getElementById("btnCargar");

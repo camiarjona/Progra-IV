@@ -1,4 +1,3 @@
-import { User } from "./user.js";
 import { UserService } from "./userservice.js";
 
 const btnAdd = document.getElementById("btnAdd");

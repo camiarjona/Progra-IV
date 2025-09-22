@@ -7,6 +7,6 @@ export class Medicamento {
     }
 
     mostrarDetalles() {
-        console.log(`Medicamento: | ID: ${this.id} | Nombre: ${this.nombre} | Precio: $${this.precio} | Stock: ${this.stock}`); 
+        console.log(`Medicamento: ID: ${this.id} | Nombre: ${this.nombre} | Precio: $${this.precio} | Stock: ${this.stock}`);
     }
 }
