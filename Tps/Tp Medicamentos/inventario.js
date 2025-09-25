@@ -40,5 +40,3 @@ export const Inventario = {
         return true;
     }
 }
-
-

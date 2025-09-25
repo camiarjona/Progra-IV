@@ -8,7 +8,10 @@ const list = document.getElementById("userList");
 let editIndex = null;
 
 function render() {
-    list.innerHTML = UserService.list()
+
+    const userToRender = UserService.list();
+
+    list.innerHTML = userToRender
         .map((user, index) => user.toHTML(index)).join("")
 
     document.querySelectorAll(".btnDelete").forEach(btn => {
@@ -50,3 +53,5 @@ btnAdd.addEventListener("click", () => {
 
     render();
 });
+
+render();

@@ -21,7 +21,7 @@ export class Venta {
         const nuevaVenta = new Venta(medicamento, cantidad)
         ventas.push(nuevaVenta);
 
-        console.log(`Venta registrada: ${medicamento.nombre} x${cantidad} - Total: $${nuevaVenta.total}`);
+        console.log(`Venta registrada: ${medicamento.nombre} x ${cantidad} - Total: $${nuevaVenta.total}`);
     }
 }
 
