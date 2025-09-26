@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de inventario</title>
+    <script type="module" src="app.js" defer></script>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="gestor">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="logo" alt="Logo App">
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#gestor">Home</a></li>
+                <li><a href="#lista-productos">Inventario</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section id="formulario">
+            <div class="form-container">
+                <form class="form-inventario">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="number" id="precio" placeholder="Precio" required>
+                    <input type="number" id="stock" placeholder="Stock" required>
+                    <input type="file" id="imagen" placeholder="Imagen">
+                    <button type="submit" class="btnAdd">Agregar Producto</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="lista-productos">
+            <div class="productos">
+                <ul id="productsList"></ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

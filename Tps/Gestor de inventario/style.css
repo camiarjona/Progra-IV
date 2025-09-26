@@ -1,0 +1,59 @@
+/* * Nav bar */
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+/* * Main */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.form-container {
+    margin: 5rem;
+    border: 0.2rem solid #ddd;
+}
+
+.form-inventario {
+    margin: 1rem;
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#formulario {
+    border: 1rem solid blue;
+}
+
+#lista-productos {
+    border: 1rem solid brown;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+#productsList li {
+    display: flex;
+    flex-direction: column;
+}
