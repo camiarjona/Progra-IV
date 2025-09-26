@@ -67,10 +67,10 @@ numeros1 = numeros1.filter(num => num !== 1);
 console.log(numeros1);
 
 // -9. Combinar Arreglos: Combina dos arreglos en uno solo, asegurándote de que no haya duplicados.
-let nums = [1,1,2,2,3,3];
-let nums1 = [4,4,5,5,6,6,1,1];
+let nums = [1, 1, 2, 2, 3, 3];
+let nums1 = [4, 4, 5, 5, 6, 6, 1, 1];
 
-let union = [...new Set([...nums,...nums1])];
+let union = [...new Set([...nums, ...nums1])];
 
 console.log(union);
 
@@ -78,24 +78,63 @@ console.log(union);
 
 // -10. Lista de Compras: Crea una lista de compras que incluya productos y sus cantidades.
 const listaCompras = [
-    {producto: 'manteca', cantidad: 1},
-    {producto: 'leche entera', cantidad: 2},
-    {producto: 'azucar', cantidad: 1},
-    {producto: 'huevo', cantidad: 6}
+    { producto: 'manteca', cantidad: 1 },
+    { producto: 'leche entera', cantidad: 2 },
+    { producto: 'azucar', cantidad: 1 },
+    { producto: 'huevo', cantidad: 6 }
 ]
 
 console.log(listaCompras);
 
 // -11. Agenda de Contactos: Crea una agenda de contactos con nombres, números de teléfono y correos electrónicos.
 const agenda = [
-    {nombre: 'Camila', telefono: '11111', email: 'cami@gmail.com'},
-    {nombre: 'Nicolas', telefono: '111222', email: 'nico@gmail.com'},
-    {nombre: 'Chechu', telefono: '222333', email: 'chechu@gmail.com'}
+    { nombre: 'Camila', telefono: '11111', email: 'cami@gmail.com' },
+    { nombre: 'Nicolas', telefono: '111222', email: 'nico@gmail.com' },
+    { nombre: 'Chechu', telefono: '222333', email: 'chechu@gmail.com' }
 ]
 
 console.log(agenda);
 
 // -12. Búsqueda de Palabras: Dado un párrafo y una palabra, cuenta cuántas veces aparece la palabra en el párrafo.
 const busqueda = [
-    {parrafo: "hola hola mundo, como estas? estas, estas?", palabra: "hola"}
+    { parrafo: "hola hola mundo, como estas? estas, estas?", palabra: "hola" }
 ]
+// desestructuracion
+const { parrafo, palabra } = busqueda[0];
+
+let ocurrencias = parrafo.split(" ").filter(p => p === palabra).length;
+
+console.log(`La palabra "${palabra}" aparece ${ocurrencias} veces.`);
+
+// -13. Clasificación de Objetos: Ordena un arreglo de objetos por una propiedad específica.
+const order = agenda.sort((a, b) => a.nombre.localeCompare(b.nombre));
+console.log(order);
+
+// -14. Registro de Ventas: Crea un registro de ventas con información sobre productos, cantidades y precios.
+const ventas = [
+    { producto: 'manteca', cantidad: 1, precio: 900 },
+    { producto: 'leche entera', cantidad: 2, precio: 1300 },
+    { producto: 'azucar', cantidad: 1, precio: 750 },
+    { producto: 'huevo', cantidad: 6, precio: 2500 }
+]
+
+// -15. Carrito de Compras: Simula un carrito de compras que permite agregar, eliminar y calcular el total.
+let carrito = [
+    { producto: 'manteca', cantidad: 1, precio: 900 },
+    { producto: 'leche entera', cantidad: 2, precio: 1300 },
+    { producto: 'azucar', cantidad: 1, precio: 750 }
+]
+console.log(carrito);
+
+// agregar
+carrito.push({ producto: 'huevo', cantidad: 6, precio: 2500 });
+console.log(carrito);
+
+// eliminar
+carrito.splice(1, 1);
+console.log(carrito);
+
+// calcular total
+let total = carrito.reduce((acum, producto) => acum + (producto.precio * producto.cantidad), 0);
+
+// -16. Gestor de Tareas: Crea un gestor de tareas que permita agregar, completar y listar tareas pendientes.
