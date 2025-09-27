@@ -29,7 +29,7 @@ main {
 }
 
 .form-container {
-    margin: 5rem;
+    padding: clamp(1rem, 3rem, 5rem);
     border: 0.2rem solid #ddd;
 }
 

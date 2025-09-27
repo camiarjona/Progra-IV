@@ -1,10 +1,15 @@
 import { ProductService } from "./productService.js";
 
-const btnAdd = document.getElementById("btnAdd");
+// form e inputs
 const nameInput = document.getElementById("nombre");
-const priceInput = Number(document.getElementById("precio"));
-const stockInput = Number(document.getElementById("stock"));
+const priceInput = document.getElementById("precio");
+const stockInput = document.getElementById("stock");
 const imageInput = document.getElementById("imagen");
+const form = document.querySelector(".form-inventario");
+// boton (acetar/actualizar)
+const btnAdd = document.getElementById("btnAdd");
+// lista
+const list = document.getElementById("productsList");
 
 let editId = null;
 
@@ -12,11 +17,11 @@ function renderProducts() {
     const productToRender = ProductService.list();
 
     list.innerHTML = productToRender
-        .map((product, id) => product.toHTML(id)).join("");
+        .map((product) => product.toHTML()).join("");
 
     document.querySelectorAll(".btnDelete").forEach(btn => {
         btn.addEventListener("click", () => {
-            const id = btn.dataset.id;
+            const id = Number(btn.dataset.id);
             ProductService.delete(id);
             renderProducts();
         });
@@ -24,8 +29,8 @@ function renderProducts() {
 
     document.querySelectorAll(".btnEdit").forEach(btn => {
         btn.addEventListener("click", () => {
-            const id = btn.dataset.id;
-            const product = ProductService.list()(id);
+            const id = Number(btn.dataset.id);
+            const product = ProductService.findById(id);
             nameInput.value = product.name;
             priceInput.value = product.price;
             stockInput.value = product.stock;
@@ -39,20 +44,39 @@ function renderProducts() {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name = nameInput.value;
-    const price = priceInput.value;
-    const stock = stockInput.value;
-    const image = image.value;
+    const file = imageInput.files[0]; // archivo seleccionado
+    const reader = new FileReader();
 
-    if (editId === null) {
-        ProductService.add(name, price, stock, image);
-    } else {
-        ProductService.update(editId, name, price, stock, image);
-        editId = null;
-        btnAdd.textContent = "Agregar";
+    reader.onload = function(event) {
+        const imageURL = event.target.result; // esta es la URL base64
+
+        const name = nameInput.value.trim();
+        const price = Number(priceInput.value);
+        const stock = Number(stockInput.value);
+
+        if (!name || isNaN(price) || isNaN(stock)) {
+            alert("Por favor completá todos los campos correctamente.");
+            return;
+        }
+
+        if (editId === null) {
+            ProductService.add(name, price, stock, imageURL);
+        } else {
+            ProductService.update(editId, name, price, stock, imageURL);
+            editId = null;
+            btnAdd.textContent = "Actualizar";
+        }
+
+        form.reset();
+        renderProducts();
     }
 
-    form.reset();
-})
+    if (file) {
+        reader.readAsDataURL(file); // convierte a base64
+    } else {
+        alert("Por favor seleccioná una imagen");
+    }
+});
+
 
 renderProducts();

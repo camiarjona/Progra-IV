@@ -7,10 +7,10 @@ export class Product {
         this.image = image;
     }
 
-    toHTML(id) {
+    toHTML() {
         return `
             <li>
-                <div class="img-card">${this.image}</div>
+                <div class="img-card"><img src="${this.image}" alt="${this.name}"></div>
                 <div class="data-card">${this.name} - ${this.price}</div>
                 <div class="stock-card">${this.stock}</div>
                 <div class="btncard">
