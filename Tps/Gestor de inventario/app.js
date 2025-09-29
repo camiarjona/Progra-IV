@@ -34,7 +34,7 @@ function renderProducts() {
             nameInput.value = product.name;
             priceInput.value = product.price;
             stockInput.value = product.stock;
-            imageInput.value = product.image;
+            //imageInput.value = product.image;
             editId = id;
             btnAdd.textContent = "Actualizar";
         });
@@ -69,6 +69,7 @@ form.addEventListener("submit", (e) => {
 
         form.reset();
         renderProducts();
+        btnAdd.textContent = "Agregar";
     }
 
     if (file) {

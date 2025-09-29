@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #CAF0F8;
+    --secondary-color: #ADE8F4;
+    --text-color: #0077B6;
+    --card-radius: 1rem;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --btn-color: #0077B6;
+    --btn-hover: #023E8A;
+    --price-color: #FF5722;
+    --stock-color: #4CAF50;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -7,6 +19,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Nata Sans', sans-serifs;
+    background-color: var(--primary-color);
 }
 
 *,

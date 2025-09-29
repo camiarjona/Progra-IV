@@ -20,19 +20,29 @@
             <ul>
                 <li><a href="#gestor">Home</a></li>
                 <li><a href="#lista-productos">Inventario</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </div>
 
+    <header>
+        <h2>Gestor de Inventario</h2>
+        <p>Administra tus productos de manera fácil y rápida</p>
+    </header>
+
     <main>
+
         <section id="formulario">
             <div class="form-container">
                 <form class="form-inventario">
                     <input type="text" id="nombre" placeholder="Nombre" required>
                     <input type="number" id="precio" placeholder="Precio" required>
                     <input type="number" id="stock" placeholder="Stock" required>
-                    <input type="file" id="imagen" accept="image/*" placeholder="Imagen">
+                    <label class="file-upload">
+                        <span>Elegir imagen</span>
+                        <input type="file" id="imagen" accept="image/*">
+                    </label>
+
                     <button type="submit" id="btnAdd">Agregar Producto</button>
                 </form>
             </div>
@@ -44,6 +54,22 @@
             </div>
         </section>
     </main>
+
+    <footer>
+
+        <div id="contact">
+            <h3>Contacto</h3>
+            <p>Email: contacto@mi-negocio.com</p>
+            <p>Teléfono: +54 9 11 1234 5678</p>
+            <p>Síguenos en redes sociales:</p>
+            <div class="footer-socials">
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>

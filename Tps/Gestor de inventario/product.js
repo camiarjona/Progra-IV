@@ -11,8 +11,11 @@ export class Product {
         return `
             <li>
                 <div class="img-card"><img src="${this.image}" alt="${this.name}"></div>
-                <div class="data-card">${this.name} - ${this.price}</div>
-                <div class="stock-card">${this.stock}</div>
+                <div class="data-card"> 
+                    <h3>${this.name}</h3> 
+                    <p>Precio: ${this.price}</p>
+                </div>
+                <div class="stock-card">Stock: ${this.stock}</div>
                 <div class="btncard">
                     <button data-id="${this.id}" class="btnEdit">📝</button>
                     <button data-id="${this.id}" class="btnDelete">🗑️</button>

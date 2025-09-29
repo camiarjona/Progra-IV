@@ -30,14 +30,14 @@ export const ProductService = {
         }
 
     },
-    update: (productId, newName, newPrice, newStock, newImage) => {
+    update: (productId, newName, newPrice, newStock) => {
         const product = ProductService.findById(productId);
 
         if (product) {
             product.name = newName;
             product.price = newPrice;
             product.stock = newStock;
-            product.image = newImage;
+            //product.image = newImage;
             saveToLocalStorage();
         }
     },

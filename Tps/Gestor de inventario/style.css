@@ -1,59 +1,201 @@
-/* * Nav bar */
+/* ------------------ Navbar ------------------ */
 .nav-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-bar ul {
     display: flex;
-    gap: 4rem;
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
+    gap: 2rem;
+    list-style: none;
 }
 
-.nav-container {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
+.nav-bar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
-/* * Main */
+.nav-bar a:hover {
+    color: var(--btn-hover);
+}
+
+/* ------------------ Header ------------------ */
+header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* ------------------ Layout principal ------------------ */
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr; /* formulario / productos */
+    gap: 2rem;
+    padding: 2rem;
 }
 
+/* ------------------ Formulario ------------------ */
 .form-container {
-    padding: clamp(1rem, 3rem, 5rem);
-    border: 0.2rem solid #ddd;
+    background: var(--secondary-color);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
 }
 
 .form-inventario {
-    margin: 1rem;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#formulario {
-    border: 1rem solid blue;
+.form-inventario input,
+.form-inventario button {
+    padding: 0.8rem;
+    border-radius: var(--card-radius);
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-#lista-productos {
-    border: 1rem solid brown;
+.form-inventario button {
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
-.productos {
+.form-inventario button:hover {
+    background-color: var(--btn-hover);
+}
+
+/* ------------------ Productos ------------------ */
+#productsList {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
 }
 
 #productsList li {
+    background: #fff;
+    border-radius: var(--card-radius);
+    padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#productsList li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.img-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.data-card {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.data-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.data-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--price-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.stock-card {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--stock-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.btncard {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btncard button {
+    background: var(--btn-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--card-radius);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btncard button:hover {
+    background: var(--btn-hover);
+    transform: scale(1.05);
+}
+
+/* ------------------ Footer ------------------ */
+footer {
+    background: var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: var(--card-radius);
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr; /* formulario arriba, productos abajo */
+    }
+}   
+
+.file-upload input[type="file"] {
+    display: none; /* ocultamos el input real */
+}
+
+.file-upload span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-upload span:hover {
+    background-color: var(--secondary-color);
 }
