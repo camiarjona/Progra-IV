@@ -199,3 +199,21 @@ footer p {
 .file-upload span:hover {
     background-color: var(--secondary-color);
 }
+
+.empty-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 2rem 0;
+font-weight: 500;
+}
+
+.non-list {
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

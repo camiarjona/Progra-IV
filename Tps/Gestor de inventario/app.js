@@ -16,6 +16,12 @@ let editId = null;
 function renderProducts() {
     const productToRender = ProductService.list();
 
+    if (productToRender.length === 0) {
+        // Si no hay productos, mostramos un cartel
+        list.innerHTML = `<div class="non-list"><p class="empty-msg">No hay productos en el inventario.</p></div>`;
+        return; // salimos de la función
+    }
+
     list.innerHTML = productToRender
         .map((product) => product.toHTML()).join("");
 
