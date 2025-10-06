@@ -1,0 +1,28 @@
+@Component (
+    {
+        selector: 'app-root' -> nombre de mi componente
+        imports:
+        templateUrl: './app.html' -> link del componente a mi plantilla html
+        styleUrl: './app.css' -> link del componente a mi hoja de estilos css
+    }
+)
+
+@Injectable -> inyectable
+
+- COMANDOS -
+. - banderas
+ng s -o -> angular compila la app y levanta un servidor local
+
+ng g c -> generate component -> le indica a angular que genere un nuevo componente
+ng g c ruta/nombreComponente
+"--skip-tests" -> skipea los archivos de testing
+ng g s -> generate service
+
+- SEÑALES -
+Nos permiten trabajar con un concepto moderno y ultimo en angular
+signal() -> metodo reactivo (que se actualiza solo)
+
+Property binding -> setear propiedades
+
+- Directivas -
+@if @else @for @empty 

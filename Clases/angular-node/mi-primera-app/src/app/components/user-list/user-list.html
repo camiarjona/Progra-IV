@@ -1,0 +1,15 @@
+<p>user-list works!</p>
+<button (click)="toggleList()">{{showList() ? 'Ocultar': 'Mostrar'}} Lista</button>
+
+@if (showList()) {
+<p>La lista está visible</p>
+<ul>
+  @for (user of users(); track $index) {
+  <li>{{user.name}}</li>
+  } @empty {
+  <p>No hay usuarios</p>
+  }
+</ul>
+} @else {
+<p>La lista esta oculta</p>
+}
