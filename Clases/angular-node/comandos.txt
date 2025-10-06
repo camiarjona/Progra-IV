@@ -18,6 +18,8 @@ ng g c ruta/nombreComponente
 "--skip-tests" -> skipea los archivos de testing
 ng g s -> generate service
 
+sudo nmp install -> para instalar la carpeta node_modules, ya que existe dentro de .gitignore, por lo que si clonamos un repo de git, esta carpeta no va a existir.
+
 - SEÑALES -
 Nos permiten trabajar con un concepto moderno y ultimo en angular
 signal() -> metodo reactivo (que se actualiza solo)
@@ -25,4 +27,5 @@ signal() -> metodo reactivo (que se actualiza solo)
 Property binding -> setear propiedades
 
 - Directivas -
+Con estas directivas accedemos al DOM, lo que nos permite insertar o modificar datos.
 @if @else @for @empty 
