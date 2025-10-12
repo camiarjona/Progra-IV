@@ -18,7 +18,7 @@ ng g c ruta/nombreComponente
 "--skip-tests" -> skipea los archivos de testing
 ng g s -> generate service
 
-sudo nmp install -> para instalar la carpeta node_modules, ya que existe dentro de .gitignore, por lo que si clonamos un repo de git, esta carpeta no va a existir.
+nmp install -> para instalar la carpeta node_modules, ya que existe dentro de .gitignore, por lo que si clonamos un repo de git, esta carpeta no va a existir.
 
 - SEÑALES -
 Nos permiten trabajar con un concepto moderno y ultimo en angular
