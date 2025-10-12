@@ -7,8 +7,10 @@ export class Comic {
     public editorial: string,
     public anio: number,
     public precio: number,
-    public imgUrl: string
+    public imgUrl: string,
+    id?: number
   ) {
-    this.id = Date.now();
+    this.id = id ?? Date.now();
+    //nullish coalescing operator ?? (si id es null o undefined, asigna Date.now())
   }
 }

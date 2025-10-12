@@ -7,52 +7,36 @@ import { Injectable } from '@angular/core';
 export class ComicService {
   private comics: Comic[] = [];
 
-  add(titulo: string, editorial: string, anio: number, precio: number, imgUrl: string) {
-    const comic: Comic = new Comic(titulo, editorial, anio, precio, imgUrl);
-    this.comics.push(comic);
+  add(newComic: Comic) {
+    this.comics.push(newComic);
     this.saveToLocalStorage();
   }
 
-  delete(id: number) {
-    const comic: Comic | undefined = this.findById(id);
+  delete(id: number): void {
+    this.comics = this.comics.filter(c => c.id !== id);
+    this.saveToLocalStorage();
+  }
 
-    if (comic) {
-      const index = this.comics.findIndex(c => c.id === id);
-      this.comics.splice(index, 1);
+  update(comicActualizado: Comic): void {
+    const index = this.comics.findIndex(c => c.id === comicActualizado.id);
+
+    if (index !== -1) {
+      this.comics[index] = comicActualizado;
       this.saveToLocalStorage();
     }
   }
 
-  update(id: number, ntitulo: string, neditorial: string, nanio: number, nprecio: number, nimgUrl: string) {
-    const comic: Comic | undefined = this.findById(id);
+  list(): Comic[] {
+    const comicJSON = localStorage.getItem('comics');
 
-    if (comic) {
-      comic.titulo = ntitulo;
-      comic.editorial = neditorial;
-      comic.anio = nanio;
-      comic.precio = nprecio;
-      comic.imgUrl = nimgUrl;
-
-      this.saveToLocalStorage();
-    }
-  }
-
-  findById(id: number) {
-    return this.comics.find(c => c.id === id);
-  }
-
-  list() {
-    const comicItem = localStorage.getItem('comics');
-    if (comicItem) {
-      const comicPlain: { titulo: string; editorial: string; anio: number; precio: number; imgUrl: string; id: number }[] = JSON.parse(comicItem);
-      this.comics = comicPlain.map(c => {
-        const comic = new Comic(c.titulo, c.editorial, c.anio, c.precio, c.imgUrl)
-        comic.id = c.id;
-        return comic;
-      });
-    } else {
+    if (!comicJSON) {
       this.comics = [];
+      return this.comics;
     }
+
+    const comicPlain = JSON.parse(comicJSON);
+
+    this.comics = comicPlain.map((c: any) => new Comic(c.titulo, c.autor, c.paginas, c.precio, c.imagen, c.id));
 
     return this.comics;
   }

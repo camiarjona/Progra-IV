@@ -1,1 +1,8 @@
 <p>comic-list works!</p>
+<h3>Lista de cómics</h3>
+
+@for (comic of comics(); track comic.id){
+<app-comic-card [comic]="comic" (edit)="onEditComic($event)" (delete)="onDeleteComic($event)"></app-comic-card>
+} @empty {
+<p>No hay cómics en la lista. ¡Agrega uno nuevo desde el formulario!</p>
+}

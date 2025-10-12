@@ -1,0 +1,11 @@
+<div class="comic-item">
+    <img [src]="comic.imgUrl" [alt]="comic.titulo" width="100">
+    <div>
+      <h4>{{comic.titulo}} ({{comic.anio}})</h4>
+      <p>Editorial: {{comic.editorial}}</p>
+      <p>Precio: ${{comic.precio}}</p>
+
+      <button (click)="onEditClick()">Editar</button>
+      <button (click)="onDeleteClick()">Eliminar</button>
+    </div>
+  </div>

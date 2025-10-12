@@ -1,3 +1,14 @@
-
-
 <router-outlet />
+
+<header>
+  <app-header></app-header>
+</header>
+
+<main>
+  <app-comic-form #form (comicAdded)="list.refreshComics()"></app-comic-form>
+  <app-comic-list [formulario]="form"></app-comic-list>
+</main>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

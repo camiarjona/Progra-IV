@@ -1,1 +1,48 @@
-<p>comic-form works!</p>
+<h3>Formulario</h3>
+
+@if (editMode()){
+<h3>Editando Cómic</h3>
+} @else {
+<h3>Agregar Cómic</h3>
+}
+
+<form (ngSubmit)="addComic()" #comicForm="ngForm">
+
+  <div>
+    <label for="title">Título</label>
+    <input type="text" id="titulo" name="titulo" [(ngModel)]="comic().titulo" required><br><br>
+  </div>
+
+  <div>
+    <label for="editorial">Editorial</label>
+    <input type="text" id="editorial" name="editorial" [(ngModel)]="comic().editorial" required><br><br>
+  </div>
+
+  <div>
+    <label for="anio">Año</label>
+    <input type="number" id="anio" name="anio" [(ngModel)]="comic().anio" required><br><br>
+  </div>
+
+  <div>
+    <label for="precio">Precio</label>
+    <input type="number" id="precio" name="precio" [(ngModel)]="comic().precio" required><br><br>
+  </div>
+
+  <div>
+    <label for="img">Imagen de portada</label>
+    <input type="url" name="img" id="img" [(ngModel)]="comic().imgUrl"><br><br>
+  </div>
+
+  <button type="submit" [disabled]="!comicForm.valid">
+    @if (editMode()) {
+      <span>Guardar cambios</span>
+    } @else {
+      <span>Agregar cómic</span>
+    }
+  </button>
+
+  @if (editMode()) {
+    <button type="button" (click)="resetForm()">Cancelar</button>
+  }
+
+</form>
