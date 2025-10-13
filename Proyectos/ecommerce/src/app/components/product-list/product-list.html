@@ -1,0 +1,7 @@
+<p>product-list works!</p>
+
+@for (product of products; track $index) {
+  <li>{{product.name}} {{product.price}}
+    <a [routerLink]="['/product', product.id]">Ver detalles</a>
+  </li>
+}

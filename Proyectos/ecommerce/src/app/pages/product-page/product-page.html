@@ -1,0 +1,10 @@
+<p>product-page works!</p>
+<h2>Agregar producto</h2>
+<form>
+  <input type="number" #id name="id" id="id">
+  <input type="text" #name name="name" id="name">
+  <input type="number" #price name="price" id="price">
+
+  <button type="button" (click)="addProduct(id.value, name.value, price.value)">Agregar</button>
+</form>
+<app-product-list></app-product-list>
