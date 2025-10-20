@@ -1,0 +1,2 @@
+Routeamos paginas, y las paginas se encarga de renderizar los componentes.
+En nuestras rutas solo apareceran paginas.

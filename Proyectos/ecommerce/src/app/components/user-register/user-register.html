@@ -1,0 +1,26 @@
+<h3>User Register</h3>
+
+<form [formGroup]="form"> <!--Enlazamos el formulario-->
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" formControlName="username" /> <!--Enlazamos el campo del formulario con formControlName-->
+  </div>
+
+  @if(form.get('username')?.invalid && form.get('username')?.touched) {
+  <div class="error">
+    Username is required.
+  </div>
+  }
+
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" formControlName="password" type="password" />
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" />
+  </div>
+
+  <button type="submit" (click)="addUser()">Register</button>
+</form>
