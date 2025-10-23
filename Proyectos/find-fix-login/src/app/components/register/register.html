@@ -1,0 +1,71 @@
+<p>register works!</p>
+<div class="register-container">
+  <h2>Crear una cuenta</h2>
+  <form [formGroup]="form" (ngSubmit)="register()"> <!--Enlazamos el formulario-->
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+    </div>
+
+    @if(form.get('email')?.invalid && form.get('email')?.touched) {
+    <div class="error">
+      @if(form.get('email')?.hasError('required')) {
+      El email es requerido.
+      }
+      @if(form.get('email')?.hasError('email')) {
+      El formato del email no es válido.
+      }
+    </div>
+    }
+
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" />
+    </div>
+
+    @if(form.get('password')?.invalid && form.get('password')?.touched) {
+    <div class="error">
+      @if(form.get('password')?.hasError('required')) {
+      La contraseña es requerida.
+      }
+      @if(form.get('password')?.hasError('minlength') || form.get('password')?.hasError('maxlength')) {
+      Debe tener entre 6 y 12 caracteres.
+      }
+    </div>
+    }
+
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" formControlName="nombre" type="text" />
+    </div>
+
+    @if (form.get('nombre')?.invalid && form.get('nombre')?.touched) {
+    <div class="error">
+      @if (form.get('nombre')?.hasError('required')) {
+      El nombre es requerido.
+      }
+      @if (form.get('nombre')?.hasError('pattern')) {
+      El nombre tiene un formato inválido.
+      }
+    </div>
+    }
+
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input id="apellido" formControlName="apellido" type="text" />
+    </div>
+
+    @if (form.get('apellido')?.invalid && form.get('apellido')?.touched) {
+    <div class="error">
+      @if (form.get('apellido')?.hasError('required')) {
+      El apellido es requerido.
+      }
+      @if (form.get('apellido')?.hasError('pattern')) {
+      El apellido tiene un formato inválido.
+      }
+    </div>
+    }
+
+    <button type="submit" [disabled]="form.invalid">Registrarse</button>
+  </form>
+</div>

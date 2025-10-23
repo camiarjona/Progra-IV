@@ -1,0 +1,91 @@
+/* Contenedor principal del formulario */
+.register-container {
+  max-width: 450px; /* Ancho máximo del formulario */
+  margin: 2rem auto; /* Centrado horizontalmente con margen superior/inferior */
+  padding: 2.5rem; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  font-family: Arial, sans-serif; /* Fuente limpia */
+}
+
+/* Título */
+h2 {
+  text-align: center; /* Título centrado */
+  color: #333; /* Color oscuro para el título */
+  margin-bottom: 2rem; /* Espacio debajo del título */
+}
+
+/* Quitamos el "register works!" */
+p {
+  display: none;
+}
+
+/* Contenedor de cada campo (label + input) */
+form > div {
+  display: flex;
+  flex-direction: column; /* Apila el label encima del input */
+  margin-bottom: 1.5rem; /* Espacio entre cada campo */
+}
+
+/* Etiquetas (Email, Password, etc.) */
+label {
+  margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+  font-weight: 600; /* Texto en negrita */
+  color: #555; /* Color de texto gris oscuro */
+  font-size: 0.9rem;
+}
+
+/* Campos de texto */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 0.8rem 0.7rem; /* Espaciado interno (alto y ancho) */
+  font-size: 1rem; /* Tamaño de letra */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  transition: border-color 0.2s, box-shadow 0.2s; /* Transición suave */
+}
+
+/* Efecto al hacer foco (clic) en un input */
+input:focus {
+  outline: none; /* Quita el borde azul feo por defecto */
+  border-color: #3f51b5; /* Color de borde (azul Material) */
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2); /* Sombra exterior suave */
+}
+
+/* Botón de Registrarse */
+button[type="submit"] {
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 0.9rem; /* Botón más grande */
+  font-size: 1.1rem; /* Texto más grande */
+  font-weight: 600;
+  color: #ffffff; /* Texto blanco */
+  background-color: #3f51b5; /* Fondo azul (color Material) */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Manito al pasar por encima */
+  transition: background-color 0.2s; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse por encima del botón */
+button[type="submit"]:hover {
+  background-color: #303f9f; /* Un azul un poco más oscuro */
+}
+
+/* Estilo del botón cuando está deshabilitado */
+button[type="submit"]:disabled {
+  background-color: #b0b0b0; /* Fondo gris */
+  color: #f1f1f1;
+  cursor: not-allowed; /* Cursor de "no permitido" */
+}
+
+/* Contenedor del mensaje de error */
+.error {
+  color: #d32f2f; /* Color rojo para errores */
+  font-size: 0.85rem; /* Letra chica */
+  margin-top: -1rem; /* Sube el error para que esté más cerca del input */
+  margin-bottom: 1rem; /* Espacio antes del siguiente campo */
+}
