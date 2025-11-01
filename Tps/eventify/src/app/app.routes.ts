@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
+import { EventList } from './pages/event-list/event-list';
 
 export const routes: Routes = [
-  // {path: 'evento', component: }
+  {path: 'events', component: EventList }
 ];
