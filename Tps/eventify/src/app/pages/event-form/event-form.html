@@ -1,0 +1,33 @@
+<h3>Crear Nuevo Evento</h3>
+
+<form [formGroup]="form" (ngSubmit)="addEvent()">
+
+  <div>
+    <label for="name">Nombre</label>
+    <input id="name" formControlName="name" />
+  </div>
+
+  @if(form.get('name')?.invalid && form.get('name')?.touched) {
+  <div class="error">
+    El nombre es obligatorio.
+  </div>
+  }
+
+  <div>
+    <label for="date">Fecha del Evento:</label>
+    <input id="date" formControlName="date" type="date" />
+  </div>
+
+  <div>
+    <label for="category">Categoría:</label>
+    <input id="category" formControlName="category" />
+  </div>
+
+  <div>
+    <label for="description">Descripción:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Crear Evento</button>
+
+</form>

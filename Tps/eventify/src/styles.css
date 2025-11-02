@@ -19,6 +19,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Nata Sans', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
 }
 
 ul {
