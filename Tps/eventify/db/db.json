@@ -8,25 +8,18 @@
       "description": "El evento más grande del año sobre las últimas tendencias en desarrollo de software."
     },
     {
-      "id": "2",
       "name": "Festival de Música Indie",
       "date": "2025-10-25",
       "category": "Música",
-      "description": "Un día completo con las mejores bandas emergentes de la escena local."
+      "description": "Un día completo con las mejores bandas emergentes de la escena local.",
+      "id": "2"
     },
     {
-      "id": "0f16",
-      "name": "Exposicion de arte",
-      "date": "2025-12-05",
-      "category": "Arte",
-      "description": "exposicion de arte moderno"
-    },
-    {
-      "id": "75a9",
-      "name": "ExpoFit",
+      "name": "Exposición de arte",
       "date": "2025-12-19",
       "category": "Arte",
-      "description": "Exposicion de fotografias"
+      "description": "Exposición de arte contemporáneo.",
+      "id": "5223"
     }
   ],
   "categories": [

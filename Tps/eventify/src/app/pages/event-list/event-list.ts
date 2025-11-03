@@ -19,4 +19,9 @@ export class EventList {
     this.eventService.getEvents().subscribe();
   }
 
+  onDelete(eventId: number): void {
+    if (confirm("¿Estás seguro de que deseas eliminar este evento?")) {
+      this.eventService.deleteEvent(eventId).subscribe();
+    }
+  }
 }

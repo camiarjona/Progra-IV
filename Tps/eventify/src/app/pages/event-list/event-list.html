@@ -4,13 +4,17 @@
     @for(event of events(); track event.id) {
     <li>
       <article class="card-event">
-        <a routerLink="event-details/{{event.id}}">
+        <a routerLink="/event-details/{{event.id}}">
           <h4>{{event.name}}</h4>
           <div class="data">
             <p>{{event.date}}</p>
             <p>{{event.category}}</p>
           </div>
         </a>
+        <div class="actions">
+          <button class="btnEdit" [routerLink]="['/events/edit', event.id]">Editar</button>
+          <button class="btnDelete" (click)="onDelete(event.id!)">Eliminar</button>
+        </div>
       </article>
     </li>
     }

@@ -16,6 +16,7 @@ export class EventService {
 
   constructor() { }
 
+  //metodo para obtener eventos
   getEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(this.apiUrl).pipe(
       tap(data => {
@@ -25,6 +26,7 @@ export class EventService {
     )
   }
 
+  //metodo para crear eventos
   createEvent(event: Event): Observable<Event> {
     return this.http.post<Event>(this.apiUrl, event).pipe(
       tap(
@@ -33,6 +35,27 @@ export class EventService {
         }
       )
     )
+  }
+
+  // metodo para eliminar eventos
+  deleteEvent(eventId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${eventId}`).pipe(
+      tap(() => {
+        this.eventState.update(currentEvents => currentEvents.filter(event => event.id !== eventId));
+      }));
+  }
+
+  //obtener evento por id
+  getById(eventId: number): Observable<Event> {
+    return this.http.get<Event>(`${this.apiUrl}/${eventId}`);
+  }
+
+  updateEvent(eventId: number, updatedEvent: Event): Observable<Event> {
+    return this.http.put<Event>(`${this.apiUrl}/${eventId}`, updatedEvent).pipe(
+      tap((event) => {
+        this.eventState.update(currentEvents => currentEvents.map(e => e.id === eventId ? event : e));
+      })
+    );
   }
 }
 
