@@ -1,0 +1,97 @@
+:host {
+  display: block;
+  /* Centra la tarjeta si la página no tiene más contenido */
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.details-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem 2.5rem;
+}
+
+/* --- Encabezado --- */
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.details-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+/* --- Secciones (Descripción y Prioridad) --- */
+.details-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.details-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.no-data {
+  color: #888;
+  font-style: italic;
+}
+
+/* --- Badges (Píldoras de Estado y Prioridad) --- */
+.status-badge,
+.priority-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Estado */
+.status-badge {
+  background-color: #f39c12; /* Naranja (Pendiente) */
+}
+.status-badge.completed {
+  background-color: #27ae60; /* Verde (Completada) */
+}
+
+/* Prioridad */
+.priority-badge.priority-alta {
+  background-color: #e74c3c; /* Rojo */
+}
+.priority-badge.priority-media {
+  background-color: #e67e22; /* Naranja Oscuro */
+}
+.priority-badge.priority-baja {
+  background-color: #2980b9; /* Azul */
+}
+
+/* --- Footer y Botón Volver --- */
+.details-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.btn-back {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #f4f7f6;
+}

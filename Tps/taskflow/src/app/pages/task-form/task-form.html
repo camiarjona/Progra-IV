@@ -1,0 +1,56 @@
+@if(editMode) {
+  <h3>Editar tarea</h3>
+} @else {
+  <h3>Nueva tarea</h3>
+}
+
+<form [formGroup]="form" (ngSubmit)="addTask()">
+
+  <div>
+    <label for="title">Título:</label>
+    <input id="title" formControlName="title" />
+
+    @if (form.controls['title'].invalid && (form.controls['title'].touched || form.controls['title'].dirty)) {
+      <div class="error-message">
+        @if (form.controls['title'].hasError('required')) {
+          <small>El título es obligatorio.</small>
+        }
+        @if (form.controls['title'].hasError('minlength')) {
+          <small>Debe tener al menos 5 caracteres.</small>
+        }
+      </div>
+    }
+  </div>
+
+  <div>
+    <label for="description">Descripción:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label for="priority">Prioridad:</label>
+    <select id="priority" formControlName="priority">
+      <option value="" disabled>Selecciona una prioridad...</option>
+      @for (option of priorities; track option){
+        <option [value]="option">{{ option }}</option>
+      }
+    </select>
+
+    @if (form.controls['priority'].invalid && (form.controls['priority'].touched || form.controls['priority'].dirty)) {
+      <div class="error-message">
+        @if (form.controls['priority'].hasError('required')) {
+          <small>Debes seleccionar una prioridad.</small>
+        }
+      </div>
+    }
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">
+    @if(editMode) {
+      Guardar cambios
+    } @else {
+      Crear tarea
+    }
+  </button>
+  <button type="button" routerLink="/tasks">Cancelar</button>
+</form>

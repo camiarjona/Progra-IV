@@ -1,0 +1,18 @@
+
+/* En lugar de aplicar el grid al :host (el componente),
+  se lo aplicamos a tu div con la clase "componentes".
+*/
+.componentes {
+  display: grid;
+  /* 1fr para el form, 1.5fr para la lista. Ajusta esto como gustes */
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2.5rem; /* Espacio entre el form y la lista */
+}
+
+/* --- Responsive para móviles --- */
+@media (max-width: 900px) {
+  .componentes {
+    grid-template-columns: 1fr; /* Se apilan verticalmente */
+    gap: 2rem;
+  }
+}

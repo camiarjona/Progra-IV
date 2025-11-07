@@ -1,0 +1,98 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Espacio entre cada tarjeta */
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* OJO: En tu HTML usaste 'card-book'.
+  Lo renombré a 'task-card' para más claridad.
+  Asegúrate de que coincida en tu HTML.
+*/
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--sombra-card);
+  transition: all 0.2s ease-in-out;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.task-card h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+  color: var(--texto-oscuro);
+}
+
+/* Div que contiene 'Prioridad' y 'Estado' */
+.task-card .data {
+  flex-grow: 1; /* Crece para ocupar el espacio */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.data p {
+  margin: 0;
+  color: var(--color-secundario);
+  font-size: 0.9rem;
+}
+
+/* Estilo para el checkbox de estado */
+.task-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.task-status label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  user-select: none; /* Evita seleccionar el texto al hacer clic */
+}
+
+/* Div que contiene los botones de acción */
+.task-card .actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0; /* Evita que los botones se achiquen */
+}
+
+/* --- Botones de la Tarjeta --- */
+.actions button {
+  padding: 0.5rem 1rem; /* Botones más pequeños */
+  font-size: 0.9rem;
+}
+
+.btnEdit {
+  background-color: var(--color-warning);
+  color: var(--texto-oscuro);
+}
+.btnEdit:hover { background-color: #e0a800; }
+
+.btnDelete {
+  background-color: var(--color-peligro);
+  color: white;
+}
+.btnDelete:hover { background-color: #c82333; }
+
+.btnDetails {
+  background-color: var(--color-secundario);
+  color: white;
+}
+.btnDetails:hover { background-color: #5a6268; }

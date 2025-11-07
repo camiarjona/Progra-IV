@@ -1,0 +1,45 @@
+@if (editMode) {
+<h3>Editar libro</h3>
+} @else {
+<h3>Cargar libro</h3>
+}
+
+<form [formGroup]="form" (ngSubmit)="addBook()">
+  <div>
+    <label for="title">Título:</label>
+    <input id="title" formControlName="title" />
+  </div>
+
+  @if(form.get('title')?.invalid && form.get('title')?.touched) {
+  <div class="error">
+    El título es obligatorio.
+  </div>
+  }
+
+  <div>
+    <label for="author">Autor:</label>
+    <input id="author" formControlName="author" />
+  </div>
+
+
+  <div>
+    <label for="genre">Género:</label>
+
+    <select id="genre" formControlName="genre">
+
+      <option value="" disabled>Selecciona un género...</option>
+
+      @for(genre of genres; track genre) {
+      <option [value]="genre">{{ genre }}</option>
+      }
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">
+    @if(editMode){
+    <span>Actualizar</span>
+    } @else {
+    <span>Agregar</span>
+    }
+  </button>
+</form>

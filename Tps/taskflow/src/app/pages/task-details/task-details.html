@@ -1,0 +1,46 @@
+<div class="details-card">
+  @if (task) {
+    <header class="details-header">
+      <h2>{{ task.title }}</h2>
+
+      <span
+        class="status-badge"
+        [class.completed]="task.completed"
+      >
+        {{ task.completed ? 'Completada' : 'Pendiente' }}
+      </span>
+    </header>
+
+    <section class="details-section">
+      <h3>Descripción</h3>
+
+      @if (task.description && task.description.length > 0) {
+        <p>{{ task.description }}</p>
+      } @else {
+        <p class="no-data"><em>No se proporcionó una descripción.</em></p>
+      }
+    </section>
+
+    <section class="details-section">
+      <h3>Prioridad</h3>
+
+      <p>
+        <span
+          class="priority-badge"
+          [class]="'priority-' + (task.priority | lowercase)"
+        >
+          {{ task.priority }}
+        </span>
+      </p>
+    </section>
+
+    <footer class="details-footer">
+      <a routerLink="/tasks" class="btn-back">
+        &larr; Volver a la lista
+      </a>
+    </footer>
+
+  } @else {
+    <p>Cargando detalles de la tarea...</p>
+  }
+</div>

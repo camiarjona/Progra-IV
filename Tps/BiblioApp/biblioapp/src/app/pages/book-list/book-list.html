@@ -1,0 +1,20 @@
+<h3>Libros</h3>
+<ul>
+  @for(book of books(); track book.id) {
+    <li>
+      <article class="card-book">
+        <a routerLink="/book-details/{{book.id}}">
+          <h4>{{book.title}}</h4>
+          <div class="data">
+            <p>{{book.author}}</p>
+            <p>{{book.genre}}</p>
+          </div>
+        </a>
+        <div class="actions">
+          <button class="btnEdit" [routerLink]="['/books/edit', book.id]">Editar</button>
+          <button class="btnDelete" (click)="onDelete(book.id!)">Eliminar</button>
+        </div>
+      </article>
+    </li>
+  }
+</ul>

@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+/* --- Variables de Color (Tema) --- */
+:root {
+  --color-primario: #007bff;
+  --color-secundario: #6c757d;
+  --color-peligro: #dc3545;
+  --color-warning: #ffc107;
+  --color-exito: #28a745;
+
+  --bg-principal: #f4f7f6;
+  --bg-header-footer: #2c3e50;
+  --bg-card: #ffffff;
+  --texto-claro: #f8f9fa;
+  --texto-oscuro: #212529;
+  --borde-color: #dee2e6;
+  --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Reseteo Básico --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-principal);
+  color: var(--texto-oscuro);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- Layout Principal (App Root) --- */
+/* Esto fuerza al footer a quedarse abajo */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* El contenido principal crece */
+  width: 90%;
+  max-width: 1400px;
+  margin: 2rem auto; /* Centra el contenido */
+}
+
+/* --- Estilos Globales de Botones --- */
+button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none; /* Para los botones que son links */
+  display: inline-block;
+  text-align: center;
+}
+
+/* --- Estilos del Header --- */
+app-header {
+  display: block;
+  background-color: #2c3e50; /* Fondo oscuro */
+  color: #f8f9fa;            /* Texto claro */
+  padding: 1rem 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos del Footer --- */
+app-footer {
+  display: block;
+  background-color: #2c3e50; /* Fondo oscuro */
+  color: #f8f9fa;            /* Texto claro */
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto; /* ¡Esta es la magia! Se empuja solo al fondo */
+}

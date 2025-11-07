@@ -1,0 +1,25 @@
+<h3>Lista de tareas</h3>
+
+<ul>
+  @for(task of tasks(); track task.id) {
+  <li>
+    <article class="card-book">
+      <h4>{{task.title}}</h4>
+      <div class="data">
+        <p>Prioridad: {{task.priority}}</p>
+        <div class="task-status">
+          <input type="checkbox" [id]="'task-' + task.id" [checked]="task.completed" (change)="onToggle(task.id!, task)" />
+          <label [for]="'task-' + task.id">
+            {{ task.completed ? 'Completada' : 'Pendiente' }}
+          </label>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btnEdit" [routerLink]="['/task/edit', task.id]">Editar</button>
+        <button class="btnDelete" (click)="onDelete(task.id!)">Eliminar</button>
+        <button class="btnDetails" [routerLink]="['/tasks', task.id]">Ver detalles</button>
+      </div>
+    </article>
+  </li>
+  }
+</ul>
